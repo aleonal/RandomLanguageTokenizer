@@ -1,0 +1,39 @@
+[output 3]
+[output "hello"]
+[a=2 output a output 5]
+[a=2 output b output 5]
+[a=2 b=1 output a]
+[a=2 b=1 output b]
+[a=2 b=a output b]
+[a=2 b=a output c]
+[]
+[a 5]
+[a = output]
+[a=6 switch 5 { case 5: output a]
+[a=6 switch b { case 5: output a]
+[a=6 switch a case 5:]
+[a=6 switch a {case 5: output a}]
+[a=6 switch a {case 5: output a break}]
+[a=6 switch a {case 5: output b break}]
+[a=6 switch a {case 6: output b break}]
+[a=6 switch a {case 6: output a break]
+[a=6 switch a {case a: output a break}]
+[a=6 output a switch a {case a: output a break}]
+[a=6 output a switch a {case 6 output a break}]
+
+[a=0 b=1 
+ switch a {
+    case 0: output "zero"
+            switch b {
+              case 0: output "\"00" break
+              case 1: output "0\"1" break
+            }
+            break
+    case 1: output c
+            break
+    case 2: output d
+            break
+    default : output "default"
+}
+]
+[5]

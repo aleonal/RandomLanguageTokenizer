@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Testing</title>
+  </head>
+  <body>
+     In the first box, put the URL of your PHP program.<br/>
+     In the second box, put the URL of the inputfile which is hard-coded in your PHP program.<br/><br/>
+     
+     Clicking "run test" will compare 2 strings:
+     <ul>
+         <li> the output of your program</li>
+         <li> the output of the instructor's PHP program using the provided input file</li>
+     </ul>
+     
+     If you believe the instructor's program output does not match the java program output,
+     please contact the instructor with your bug report.<br/><br/>
+        
+     <form method="post" action="runProgramsTest.php">     
+     URL of the php program:
+     <input type="text" size="48" name="evaluator" value="http://localhost/yourProgramDirectory/yourprogram.php"><br/>
+     URL of the input file:
+     <input type="text" size="48" name="inputfile" value="http://localhost/yourInputDirectory/yourInputFile"><br/>
+     <input type="submit" value="run test">
+     </form>
+  </body>
+</html>
