@@ -16,7 +16,6 @@ class Tokenizer {
         // skip blanklike characters
         do {
              $blankCount = ctype_space($this->e[$this->i]);
-            //$blankCount = strpos(" \n\t\r", $this->e[$this->i]);
             if ($blankCount === FALSE)
                 $blankCount = -1;
             else

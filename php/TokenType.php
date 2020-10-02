@@ -18,5 +18,4 @@ class TokenType {
     const EOF = 'EOF';
     const OTHER = 'OTHER';
 }
-
 ?>
