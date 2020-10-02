@@ -10,9 +10,4 @@ class EvalSectionException extends Exception {
         return PHP_EOL . __CLASS__ . ": " . "\"{$this->message}\"" . ", in line {$this->getLine()}." . PHP_EOL;
     }
 }
-
-try {
-    throw new EvalSectionException("test");
-} catch (EvalSectionException $e) {
-    echo $e;
-}
+?>
