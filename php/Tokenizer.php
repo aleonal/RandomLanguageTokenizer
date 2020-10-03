@@ -2,9 +2,9 @@
 require_once "Token.php";
 
 class Tokenizer {
-    private $e;
-    private $i;
-    protected $currentChar;
+    private $e; // char array containing input file characters
+    private $i; // index of the current character
+    private $currentChar; // the actual current character, but it is not used? Raised question on BB
 
     public function __construct($s) {
         $this->e = $s;
