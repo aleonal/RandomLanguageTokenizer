@@ -81,7 +81,7 @@ class Fall20PHPProg {
         self::$result = '';
 
         if (self::$currentToken->getType() !== TokenType::LSQUAREBRACKET) {
-            throw new EvalSectionException('A section must start with "["');
+            throw new EvalSectionException("A section must start with \"[\"");
         }
         echo '[' . self::$EOL;
         self::$currentToken = self::$t->nextToken();
@@ -107,7 +107,7 @@ class Fall20PHPProg {
                 self::evalOutput($indent, $exec);
                 break;
             default:
-                throw new EvalSectionException("Invalid statement");
+                throw new EvalSectionException("invalid statement");
         }
     }
 
@@ -119,7 +119,7 @@ class Fall20PHPProg {
         self::$currentToken = self::$t->nextToken();
 
         if (self::$currentToken->getType() !== TokenType::EQUAL) {
-            throw new EvalSectionException("Equal sign expected");
+            throw new EvalSectionException("equal sign expected");
         }
         echo '=';
         self::$currentToken = self::$t->nextToken();
@@ -211,7 +211,7 @@ class Fall20PHPProg {
             $value = self::$map[$key];
 
             if ($value === NULL) {
-                throw new EvalSectionException("Undefined variable");
+                throw new EvalSectionException("undefined variable");
             }
         }
         self::$currentToken = self::$t->nextToken();
